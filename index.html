@@ -1,1 +1,149 @@
-<h1>Hello Resham</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Developer</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        background: #0f172a;
+        color: #fff;
+    }
+
+    /* HEADER */
+    header {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+
+    /* Standard */
+    background-clip: text;
+
+    /* Webkit support */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+    header p {
+        margin-top: 10px;
+        color: #94a3b8;
+    }
+
+    /* MAIN SECTION */
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .card {
+        flex: 1 1 300px;
+        max-width: 350px;
+        padding: 30px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        transition: 0.3s;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .card h2 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        color: #cbd5f5;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* COLORS FOR EACH DOMAIN */
+    .ml {
+        border-top: 4px solid #00c6ff;
+    }
+
+    .uiux {
+        border-top: 4px solid #ff7eb3;
+    }
+
+    .flutter {
+        border-top: 4px solid #00ff9f;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #64748b;
+        font-size: 0.9rem;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Developer Journey</h1>
+    <p>Machine Learning • UI/UX Design • Flutter Development</p>
+</header>
+
+<section class="skills">
+
+    <div class="card ml">
+        <h2>🤖 Machine Learning</h2>
+        <p>
+            Started my journey as a Machine Learning Developer, working on data analysis,
+            model training, and intelligent systems. Focused on solving real-world problems
+            using AI and automation.
+        </p>
+    </div>
+
+    <div class="card uiux">
+        <h2>🎨 UI/UX Design</h2>
+        <p>
+            Currently exploring UI/UX design, creating clean, user-friendly, and modern interfaces.
+            Passionate about designing intuitive experiences that connect users with technology.
+        </p>
+    </div>
+
+    <div class="card flutter">
+        <h2>📱 Flutter (Future)</h2>
+        <p>
+            Moving towards Flutter development to build cross-platform mobile applications.
+            Aiming to combine design + functionality into seamless user experiences.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 | Built with passion 🚀
+</footer>
+
+</body>
+</html>
