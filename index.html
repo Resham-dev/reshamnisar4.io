@@ -1,149 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resham Nisar | Designer Developer</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-        background: #0f172a;
-        color: #fff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #030817;
+      color: #fff;
+      overflow-x: hidden;
     }
 
-    /* HEADER */
     header {
-        text-align: center;
-        padding: 40px 20px;
+      width: 100%;
+      height: 90px;
+      background: #913492;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 65px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
     }
 
-    header h1 {
-    font-size: 2.5rem;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-
-    /* Standard */
-    background-clip: text;
-
-    /* Webkit support */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
-    header p {
-        margin-top: 10px;
-        color: #94a3b8;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    /* MAIN SECTION */
-    .skills {
-        display: flex;
+    .logo-img {
+      width: 70px;
+      height: 55px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.15);
+      border-radius: 8px;
+    }
+
+    .logo-text h2 {
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .logo-text p {
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: #f2dff5;
+    }
+
+    nav {
+      display: flex;
+      gap: 55px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #17c9ff;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 90px;
+      position: relative;
+      background: #030817;
+    }
+
+    .hero-bg {
+      width: 100%;
+      min-height: calc(100vh - 90px);
+      background:
+        linear-gradient(
+          rgba(2, 7, 24, 0.05),
+          rgba(2, 7, 24, 0.25)
+        ),
+        url("bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .placeholder-text {
+      text-align: center;
+      max-width: 700px;
+      padding: 40px;
+      border: 1px dashed rgba(255,255,255,0.35);
+      border-radius: 25px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+    }
+
+    .placeholder-text h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .placeholder-text span {
+      color: #13c8ff;
+    }
+
+    .placeholder-text p {
+      font-size: 18px;
+      color: #dbeafe;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav {
+        gap: 22px;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 40px;
-        gap: 30px;
+      }
+
+      nav a {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding-top: 150px;
+      }
+
+      .hero-bg {
+        align-items: center;
+        min-height: calc(100vh - 150px);
+      }
+
+      .placeholder-text h1 {
+        align-items: center;
+        font-size: 38px;
+      }
     }
 
-    .card {
-        flex: 1 1 300px;
-        max-width: 350px;
-        padding: 30px;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        transition: 0.3s;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
+    @media (max-width: 500px) {
+      header {
+        padding: 16px;
+      }
 
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    }
+      .logo-img {
+        width: 58px;
+        height: 45px;
+      }
 
-    .card h2 {
-        margin-bottom: 15px;
-        font-size: 1.5rem;
-    }
+      .logo-text h2 {
+        font-size: 18px;
+      }
 
-    .card p {
-        color: #cbd5f5;
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
+      nav {
+        gap: 16px;
+      }
 
-    /* COLORS FOR EACH DOMAIN */
-    .ml {
-        border-top: 4px solid #00c6ff;
-    }
+      nav a {
+        font-size: 15px;
+      }
 
-    .uiux {
-        border-top: 4px solid #ff7eb3;
-    }
+      .placeholder-text {
+        align-items: center;
+        margin: 20px;
+        padding: 28px;
+      }
 
-    .flutter {
-        border-top: 4px solid #00ff9f;
+      .placeholder-text h1 {
+        align-items: center;
+        font-size: 30px;
+      }
     }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-        padding: 20px;
-        color: #64748b;
-        font-size: 0.9rem;
-    }
-
-</style>
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>My Developer Journey</h1>
-    <p>Machine Learning • UI/UX Design • Flutter Development</p>
-</header>
-
-<section class="skills">
-
-    <div class="card ml">
-        <h2>🤖 Machine Learning</h2>
-        <p>
-            Started my journey as a Machine Learning Developer, working on data analysis,
-            model training, and intelligent systems. Focused on solving real-world problems
-            using AI and automation.
-        </p>
+  <header>
+    <div class="logo">
+      <div class="logo-text">
+        <h1>Resham Nisar</h1>
+        <p>Designer. Developer</p>
+      </div>
     </div>
 
-    <div class="card uiux">
-        <h2>🎨 UI/UX Design</h2>
-        <p>
-            Currently exploring UI/UX design, creating clean, user-friendly, and modern interfaces.
-            Passionate about designing intuitive experiences that connect users with technology.
-        </p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Work</a>
+      <a href="#">Skills</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <!-- Remove "placeholder" class when using your real image -->
+    <div class="hero-bg">
+
     </div>
-
-    <div class="card flutter">
-        <h2>📱 Flutter (Future)</h2>
-        <p>
-            Moving towards Flutter development to build cross-platform mobile applications.
-            Aiming to combine design + functionality into seamless user experiences.
-        </p>
-    </div>
-
-</section>
-
-<footer>
-    © 2026 | Built with passion 🚀 | Developer by Resham Nisar
-</footer>
+  </section>
 
 </body>
 </html>
