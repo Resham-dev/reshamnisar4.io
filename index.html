@@ -3,219 +3,296 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resham Nisar | Designer Developer</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <title>Resham Nisar | Designer & Developer</title>
 
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #030817;
-      color: #fff;
-      overflow-x: hidden;
-    }
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    header {
-      width: 100%;
-      height: 90px;
-      background: #913492;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 65px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 100;
-    }
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" 
+    rel="stylesheet"
+  />
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-img {
-      width: 70px;
-      height: 55px;
-      object-fit: contain;
-      background: rgba(255,255,255,0.15);
-      border-radius: 8px;
-    }
-
-    .logo-text h2 {
-      font-size: 22px;
-      line-height: 1;
-      font-weight: 700;
-    }
-
-    .logo-text p {
-      font-size: 13px;
-      letter-spacing: 1px;
-      color: #f2dff5;
-    }
-
-    nav {
-      display: flex;
-      gap: 55px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 22px;
-      font-weight: 700;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #17c9ff;
-    }
-
-    .hero {
-      min-height: 100vh;
-      padding-top: 90px;
-      position: relative;
-      background: #030817;
-    }
-
-    .hero-bg {
-      width: 100%;
-      min-height: calc(100vh - 90px);
-      background:
-        linear-gradient(
-          rgba(2, 7, 24, 0.05),
-          rgba(2, 7, 24, 0.25)
-        ),
-        url("bg.png");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .placeholder-text {
-      text-align: center;
-      max-width: 700px;
-      padding: 40px;
-      border: 1px dashed rgba(255,255,255,0.35);
-      border-radius: 25px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
-    }
-
-    .placeholder-text h1 {
-      font-size: 58px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .placeholder-text span {
-      color: #13c8ff;
-    }
-
-    .placeholder-text p {
-      font-size: 18px;
-      color: #dbeafe;
-    }
-
-    @media (max-width: 900px) {
-      header {
-        height: auto;
-        padding: 20px;
-        flex-direction: column;
-        gap: 18px;
-      }
-
-      nav {
-        gap: 22px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      nav a {
-        font-size: 17px;
-      }
-
-      .hero {
-        padding-top: 150px;
-      }
-
-      .hero-bg {
-        align-items: center;
-        min-height: calc(100vh - 150px);
-      }
-
-      .placeholder-text h1 {
-        align-items: center;
-        font-size: 38px;
-      }
-    }
-
-    @media (max-width: 500px) {
-      header {
-        padding: 16px;
-      }
-
-      .logo-img {
-        width: 58px;
-        height: 45px;
-      }
-
-      .logo-text h2 {
-        font-size: 18px;
-      }
-
-      nav {
-        gap: 16px;
-      }
-
-      nav a {
-        font-size: 15px;
-      }
-
-      .placeholder-text {
-        align-items: center;
-        margin: 20px;
-        padding: 28px;
-      }
-
-      .placeholder-text h1 {
-        align-items: center;
-        font-size: 30px;
-      }
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">
-      <div class="logo-text">
-        <h1>Resham Nisar</h1>
-        <p>Designer. Developer</p>
-      </div>
-    </div>
+  <!-- Background Glow -->
+  <div class="bg-glow bg-glow-one"></div>
+  <div class="bg-glow bg-glow-two"></div>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Work</a>
-      <a href="#">Skills</a>
-      <a href="#">Contact</a>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+
+      <div class="brand">
+        <div class="brand-logo">
+          <span></span>
+        </div>
+
+        <div>
+          <h1>Resham Nisar</h1>
+          <p>Designer & Developer</p>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="connect-btn">
+        Let’s Connect
+        <span>↗</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+
     </nav>
   </header>
 
-  <section class="hero">
-    <!-- Remove "placeholder" class when using your real image -->
-    <div class="hero-bg">
+  <main>
 
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero section-padding" id="home">
+
+      <div class="hero-content">
+
+        <p class="intro-text">Hi, I’m Resham</p>
+
+        <h2>
+          From Wireframes to <br />
+          <span>Working Products.</span>
+        </h2>
+
+        <p class="hero-description">
+          I design sleek interfaces and build functional, scalable solutions
+          that make an impact.
+        </p>
+
+        <div class="code-card">
+          <div class="code-line">
+            <span>01</span> function <b>createImpact</b>() {
+          </div>
+
+          <div class="code-line">
+            <span>02</span> const ideas = <em>'design + code'</em>;
+          </div>
+
+          <div class="code-line">
+            <span>03</span> const passion = <em>'always improving'</em>;
+          </div>
+
+          <div class="code-line">
+            <span>04</span> let result = ideas + passion;
+          </div>
+
+          <div class="code-line">
+            <span>05</span> return result that makes an impact;
+          </div>
+
+          <div class="code-line">
+            <span>06</span> }
+          </div>
+        </div>
+
+        <div class="hero-status">
+          <div>
+            <span class="status-dot"></span>
+            Available for work
+          </div>
+
+          <div>
+            ⚡ Fast & Reliable Delivery
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section section-padding">
+      <div class="tools-wrapper" id="toolsWrapper">
+        <!-- Tools will be loaded using JavaScript -->
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-padding" id="about">
+      <div class="about-card">
+
+        <div class="about-image-box">
+          <div class="profile-placeholder">
+            <img 
+              src="assets/images/about-me.png" 
+              alt="Resham Nisar" 
+              class="about-profile-img"
+            />
+
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h2>
+            I <span>Design</span> Experiences. <br />
+            I <span>Build</span> Solutions.
+          </h2>
+
+          <p>
+            I’m a Designer and Developer who loves turning ideas into beautiful,
+            functional and user-focused products. With a strong foundation in UI/UX
+            design and clean code, I deliver digital solutions that not only look
+            amazing but also perform brilliantly.
+          </p>
+
+          <div class="about-points">
+            <div>
+              <span>✦</span>
+              UI/UX · Frontend · Design
+            </div>
+
+            <div>
+              <span>✦</span>
+              Clean & Maintainable Code
+            </div>
+
+            <div>
+              <span>✦</span>
+              Performance Focused
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section section-padding" id="certifications">
+      <div class="section-title">
+        <span></span>
+        <h2>◎ Certifications</h2>
+        <span></span>
+      </div>
+
+      <div class="certificates-wrapper" id="certificatesWrapper">
+        <!-- Certificates will be loaded using JavaScript -->
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section section-padding" id="achievements">
+      <div class="section-title">
+        <span></span>
+        <h2>🏆 Achievements</h2>
+        <span></span>
+      </div>
+
+      <div class="achievements-wrapper" id="achievementsWrapper">
+        <!-- Achievements will be loaded using JavaScript -->
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work-section section-padding" id="work">
+      <div class="section-title">
+        <span></span>
+        <h2>✦ My Work</h2>
+        <span></span>
+      </div>
+
+      <div class="work-switch">
+        <button class="work-tab active" data-work="developer">
+          &lt;/&gt; Developer Work
+        </button>
+
+        <button class="work-tab" data-work="design">
+          ✎ Design Work
+        </button>
+      </div>
+
+      <div class="projects-wrapper" id="projectsWrapper">
+        <!-- Projects will be loaded using JavaScript -->
+      </div>
+
+      <div class="view-all-box">
+        <a href="#" class="view-all-btn">
+          View All Projects
+          <span>→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="contact-card">
+
+        <div class="contact-profile">
+          <div class="small-avatar">👩‍💻</div>
+
+          <div>
+            <h3>Resham Nisar</h3>
+            <p>Designer & Developer</p>
+          </div>
+
+          <p class="contact-bio">
+            Designing beautiful experiences and building scalable solutions
+            that drive real impact.
+          </p>
+
+          <div class="social-links">
+            <a href="#">in</a>
+            <a href="#">gh</a>
+            <a href="#">dr</a>
+            <a href="#">Be</a>
+            <a href="#">ig</a>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <h3>Contact</h3>
+
+          <p>✉ resham.nisar.dev@gmail.com</p>
+          <p>☎ +92 300 1234567</p>
+          <p>⌖ Islamabad, Pakistan</p>
+        </div>
+
+        <div class="connect-box">
+          <h3>Let’s Connect</h3>
+
+          <p>
+            Have a project in mind? <br />
+            I’m available for freelance work.
+          </p>
+
+          <a href="mailto:resham.nisar.dev@gmail.com" class="say-hello-btn">
+            Say Hello 👋
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer section-padding">
+    <p>© 2025 Resham Nisar. All rights reserved.</p>
+    <p>Crafted with ❤️ and lots of ☕</p>
+
+    <a href="#home" class="back-top">↑</a>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 
 </body>
 </html>
