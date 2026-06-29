@@ -9,9 +9,8 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
@@ -20,7 +19,6 @@
 </head>
 
 <body>
-
   <!-- Background Glow -->
   <div class="bg-glow bg-glow-one"></div>
   <div class="bg-glow bg-glow-two"></div>
@@ -28,8 +26,7 @@
   <!-- Header -->
   <header class="header">
     <nav class="navbar">
-
-      <div class="brand">
+      <a href="#home" class="brand" aria-label="Resham Nisar Home">
         <div class="brand-logo">
           <span></span>
         </div>
@@ -38,9 +35,9 @@
           <h1>Resham Nisar</h1>
           <p>Designer & Developer</p>
         </div>
-      </div>
+      </a>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#certifications">Certifications</a></li>
@@ -54,69 +51,50 @@
         <span>↗</span>
       </a>
 
-      <button class="menu-btn" id="menuBtn">☰</button>
-
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
     </nav>
   </header>
 
   <main>
-
     <!-- Hero Section -->
-    <section class="hero section-padding" id="home">
+    <section class="hero" id="home">
+      <div class="hero-inner section-padding">
+        <div class="hero-content">
+          <p class="intro-text">Hi, I’m Resham</p>
 
-      <div class="hero-content">
+          <h2>
+            From Wireframes to <br />
+            <span>Working Products.</span>
+          </h2>
 
-        <p class="intro-text">Hi, I’m Resham</p>
+          <p class="hero-description">
+            I design sleek interfaces and build functional, scalable solutions
+            that make an impact.
+          </p>
 
-        <h2>
-          From Wireframes to <br />
-          <span>Working Products.</span>
-        </h2>
-
-        <p class="hero-description">
-          I design sleek interfaces and build functional, scalable solutions
-          that make an impact.
-        </p>
-
-        <div class="code-card">
-          <div class="code-line">
-            <span>01</span> function <b>createImpact</b>() {
+          <div class="code-card" aria-label="Code snippet">
+            <div class="code-line"><span>01</span> function <b>createImpact</b>() {</div>
+            <div class="code-line"><span>02</span> const ideas = <em>'design + code'</em>;</div>
+            <div class="code-line"><span>03</span> const passion = <em>'always improving'</em>;</div>
+            <div class="code-line"><span>04</span> let result = ideas + passion;</div>
+            <div class="code-line"><span>05</span> return result that makes an impact;</div>
+            <div class="code-line"><span>06</span> }</div>
           </div>
 
-          <div class="code-line">
-            <span>02</span> const ideas = <em>'design + code'</em>;
-          </div>
+          <div class="hero-status">
+            <div>
+              <span class="status-dot"></span>
+              Available for work
+            </div>
 
-          <div class="code-line">
-            <span>03</span> const passion = <em>'always improving'</em>;
-          </div>
-
-          <div class="code-line">
-            <span>04</span> let result = ideas + passion;
-          </div>
-
-          <div class="code-line">
-            <span>05</span> return result that makes an impact;
-          </div>
-
-          <div class="code-line">
-            <span>06</span> }
+            <div>
+              ⚡ Fast & Reliable Delivery
+            </div>
           </div>
         </div>
-
-        <div class="hero-status">
-          <div>
-            <span class="status-dot"></span>
-            Available for work
-          </div>
-
-          <div>
-            ⚡ Fast & Reliable Delivery
-          </div>
-        </div>
-
       </div>
-
     </section>
 
     <!-- Tools Section -->
@@ -129,15 +107,13 @@
     <!-- About Section -->
     <section class="about-section section-padding" id="about">
       <div class="about-card">
-
         <div class="about-image-box">
           <div class="profile-placeholder">
-            <img 
-              src="assets/images/about-me.png" 
-              alt="Resham Nisar" 
+            <img
+              src="assets/images/about-me.png"
+              alt="Resham Nisar"
               class="about-profile-img"
             />
-
           </div>
         </div>
 
@@ -171,7 +147,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -210,11 +185,11 @@
       </div>
 
       <div class="work-switch">
-        <button class="work-tab active" data-work="developer">
+        <button class="work-tab active" type="button" data-work="developer">
           &lt;/&gt; Developer Work
         </button>
 
-        <button class="work-tab" data-work="design">
+        <button class="work-tab" type="button" data-work="design">
           ✎ Design Work
         </button>
       </div>
@@ -234,7 +209,6 @@
     <!-- Contact Section -->
     <section class="contact-section section-padding" id="contact">
       <div class="contact-card">
-
         <div class="contact-profile">
           <div class="small-avatar">👩‍💻</div>
 
@@ -249,17 +223,16 @@
           </p>
 
           <div class="social-links">
-            <a href="#">in</a>
-            <a href="#">gh</a>
-            <a href="#">dr</a>
-            <a href="#">Be</a>
-            <a href="#">ig</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="GitHub">gh</a>
+            <a href="#" aria-label="Dribbble">dr</a>
+            <a href="#" aria-label="Behance">Be</a>
+            <a href="#" aria-label="Instagram">ig</a>
           </div>
         </div>
 
         <div class="contact-info">
           <h3>Contact</h3>
-
           <p>✉ resham.nisar.dev@gmail.com</p>
           <p>☎ +92 300 1234567</p>
           <p>⌖ Islamabad, Pakistan</p>
@@ -277,22 +250,18 @@
             Say Hello 👋
           </a>
         </div>
-
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
   <footer class="footer section-padding">
     <p>© 2025 Resham Nisar. All rights reserved.</p>
     <p>Crafted with ❤️ and lots of ☕</p>
-
-    <a href="#home" class="back-top">↑</a>
+    <a href="#home" class="back-top" aria-label="Back to top">↑</a>
   </footer>
 
   <!-- JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>
